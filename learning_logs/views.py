@@ -43,7 +43,7 @@ def new_topic(request):
             new_topic = form.save(commit=False)
             new_topic.owner = request.user
             new_topic.save()
-            return redirect('topics')
+            return redirect('learning_logs:topics')
         
     # Display a blank or invalid form.
     context = {'form': form}
@@ -64,7 +64,7 @@ def new_entry(request, topic_id):
             new_entry = form.save(commit=False)
             new_entry.topic = topic
             new_entry.save()
-            return redirect('topic', topic_id=topic_id)
+            return redirect('learning_logs:topic', topic_id=topic_id)
         
     # Display a blank or invalid form.
     context = {'topic': topic, 'form': form}
@@ -86,7 +86,7 @@ def edit_entry(request, entry_id):
         form = EntryForm(instance=entry, data=request.POST)
         if form.is_valid():
             form.save()
-            return redirect('topic', topic_id=topic.id)
+            return redirect('learning_logs:topic', topic_id=topic.id)
         
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
