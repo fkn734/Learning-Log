@@ -24,16 +24,16 @@ Learning Log is a web application developed in Python using the Django framework
 2. **Install the requirements:**
 
    ```bash
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 3. **Perform database migrations:**
 
    ```bash
-python manage.py migrate
+   python manage.py migrate
 
 4. **Run the development server:**
    ```bash
-python manage.py runserver 
+   python manage.py runserver 
 
 ## Usage
 
