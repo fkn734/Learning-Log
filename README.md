@@ -5,7 +5,7 @@ Learning Log is a web application developed in Python using the Django framework
 ## Features
 
 - User registration: Users can create an account to access the application.
-- Topics: Users can add, view, edit, and delete topics they want to learn about.
+- Topics: Users can add, view, edit, and delete (fix on progress) topics they want to learn about.
 - Journal entries: Users can add, view, edit, and delete journal entries for each topic.
 - Admin interface: Administrators have access to a special interface to manage users, topics, and entries.
 
